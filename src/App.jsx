@@ -58,7 +58,7 @@ export default function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`來自作品集的專案諮詢 - ${formData.name}`);
+    const subject = encodeURIComponent(`來自網站的專案諮詢 - ${formData.name}`);
     const body = encodeURIComponent(
       `姓名：${formData.name}\n聯絡信箱：${formData.email}\n\n訊息內容：\n${formData.message}`,
     );
@@ -83,15 +83,18 @@ export default function App() {
       <main className="px-6 pb-20 pt-24">
         {activeTab === 'portfolio' && !selectedProject ? (
           <div className="mx-auto max-w-7xl">
-            <SectionHeader title="連結人、城市與自然" subtitle="十一年的實踐軌跡。" />
-            <ProjectGrid items={PROJECTS} onSelect={setSelectedProject} buttonLabel="查看詳情" />
+            <SectionHeader
+              title="景觀設計專案"
+              subtitle="涵蓋公共空間、住宅社區與複合開發，歷年主導與深度參與的實務案例。"
+            />
+            <ProjectGrid items={PROJECTS} onSelect={setSelectedProject} buttonLabel="查看專案" />
           </div>
         ) : null}
 
         {activeTab === 'portfolio' && selectedProject ? (
           <ProjectDetail
             project={selectedProject}
-            backLabel="返回作品列表"
+            backLabel="返回參與專案"
             onBack={() => setSelectedProject(null)}
             contentTitle="專案概述與設計理念"
             metadataLabels={{ year: '年份：', client: '業主：', area: '面積：' }}

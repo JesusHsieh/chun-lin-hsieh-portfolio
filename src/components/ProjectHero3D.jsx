@@ -72,38 +72,20 @@ export default function ProjectHero3D({ project }) {
                   backgroundPosition: slide.backgroundPosition,
                 }}
                 aria-hidden={!isActive}
-              >
-                <div className="project-hero-3d__overlay" />
-                <div className="project-hero-3d__content">
-                  <p className="project-hero-3d__eyebrow">
-                    {project.category} / {slide.label}
-                  </p>
-                  <h3 className="project-hero-3d__title">{project.title}</h3>
-                  <div className="project-hero-3d__meta">
-                    <span>{project.year}</span>
-                    {project.area ? <span>{project.area}</span> : null}
-                  </div>
-                </div>
-              </div>
+              />
             );
           })}
         </div>
 
-        <div className="project-hero-3d__panel project-hero-3d__panel--glass">
-          <div className="project-hero-3d__glass-label">3D Page Flip</div>
-          <div className="project-hero-3d__glass-copy">
-            主圖區改為自動翻頁的展示模組，之後可直接放入 2 到 3 張專案圖片。
-          </div>
-          <div className="project-hero-3d__pagination" aria-label="slide pagination">
-            {slides.map((slide, index) => (
-              <span
-                key={`${slide.label}-dot`}
-                className={`project-hero-3d__dot ${
-                  index === activeIndex ? 'project-hero-3d__dot--active' : ''
-                }`}
-              />
-            ))}
-          </div>
+        <div className="project-hero-3d__pagination" aria-label="slide pagination">
+          {slides.map((slide, index) => (
+            <span
+              key={`${slide.label}-dot`}
+              className={`project-hero-3d__dot ${
+                index === activeIndex ? 'project-hero-3d__dot--active' : ''
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

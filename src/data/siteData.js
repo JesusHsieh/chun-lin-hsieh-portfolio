@@ -1,5 +1,5 @@
 export const NAV_ITEMS = [
-  { id: 'portfolio', label: '作品集' },
+  { id: 'portfolio', label: '參與專案' },
   { id: 'personal', label: '個人專案' },
   { id: 'about', label: '關於我' },
   { id: 'resume', label: '經歷' },
@@ -49,7 +49,7 @@ export const PROJECTS = [
     ],
     description:
       '結合百年古蹟修復與淡水河岸景觀縫合，打造具備歷史深度的水岸休憩空間。',
-    client: '新北市政府文化局',
+    client: '新北市政府城鄉發展局',
     area: '約 1.5 公頃',
     details: [
       '本案位於具備豐富歷史脈絡的淡水河畔，設計核心在於「隱形與縫合」。我們透過極簡的景觀語彙，退讓出古蹟本體的視覺主導權，並將原本封閉的港區軍用圍牆打開，重新縫合城市街道與淡水河岸的空間動線。',
@@ -62,11 +62,11 @@ export const PROJECTS = [
     title: '新北投地熱谷改造活化 | 溫泉地景復育',
     category: '觀光遊憩 / 地質保育',
     year: '2022',
-    coverImage: '/images/portfolio/portfolio-02-cover.jpg',
+    coverImage: '/images/portfolio/portfolio-02-cover.webp',
     heroImages: [
-      '/images/portfolio/portfolio-02-hero-01.jpg',
+      '/images/portfolio/portfolio-02-hero-01.webp',
       '/images/portfolio/portfolio-02-hero-02.jpg',
-      '/images/portfolio/portfolio-02-hero-03.jpg',
+      '/images/portfolio/portfolio-02-hero-03.jpeg',
     ],
     description:
       '克服強酸微氣候的嚴苛環境，建置無障礙環湖生態步道，重塑百年溫泉鄉自然療癒氛圍。',
@@ -106,7 +106,7 @@ export const PROJECTS = [
     coverImage: '/images/portfolio/portfolio-04-cover.jpg',
     heroImages: [
       '/images/portfolio/portfolio-04-hero-01.jpg',
-      '/images/portfolio/portfolio-04-hero-02.jpg',
+      '/images/portfolio/portfolio-04-hero-02.JPG',
       '/images/portfolio/portfolio-04-hero-03.jpg',
     ],
     description:
@@ -128,7 +128,7 @@ export const PROJECTS = [
     heroImages: [
       '/images/portfolio/portfolio-05-hero-01.jpg',
       '/images/portfolio/portfolio-05-hero-02.jpg',
-      '/images/portfolio/portfolio-05-hero-03.jpg',
+      '/images/portfolio/portfolio-05-hero-03.webp',
     ],
     description:
       '攜手 Karl Lagerfeld 團隊，將巴黎高級訂製服美學轉譯為景觀語彙的頂尖豪宅大作。',
@@ -145,15 +145,15 @@ export const PROJECTS = [
     title: '永和勝開大地 | 指標性都市更新',
     category: '都市更新 / 大型社區',
     year: '2020',
-    coverImage: '/images/portfolio/portfolio-06-cover.jpg',
+    coverImage: '/images/portfolio/portfolio-06-cover.JPG',
     heroImages: [
-      '/images/portfolio/portfolio-06-hero-01.jpg',
-      '/images/portfolio/portfolio-06-hero-02.jpg',
-      '/images/portfolio/portfolio-06-hero-03.jpg',
+      '/images/portfolio/portfolio-06-hero-01.JPG',
+      '/images/portfolio/portfolio-06-hero-02.JPG',
+      '/images/portfolio/portfolio-06-hero-03.JPG',
     ],
     description:
       '於高密度都會區中重塑大型全齡化社區，兼顧防災滯洪與鄰里友善的開放綠地空間。',
-    client: '勝治機構 / 皇翔建設',
+    client: '勝治機構 / 大陸建設',
     area: '約 3,100 坪',
     details: [
       '本案位於人口密度極高的新北市永和區，是極具指標性的大型公辦都更案。景觀設計肩負著縫合新舊街區與釋放都市呼吸空間的社會使命。我們沿著街角大量退縮，創造出連續性的帶狀開放綠地，將老舊街廓轉化為與鄰里共享的友善林蔭步道。',
@@ -187,9 +187,9 @@ export const PROJECTS = [
     title: '菲律賓克拉克水上樂園 | 國際主題渡假村',
     category: '跨國專案 / 商業遊憩',
     year: '2019',
-    coverImage: '/images/portfolio/portfolio-08-cover.jpg',
+    coverImage: '/images/portfolio/portfolio-08-cover.JPG',
     heroImages: [
-      '/images/portfolio/portfolio-08-hero-01.jpg',
+      '/images/portfolio/portfolio-08-hero-01.JPG',
       '/images/portfolio/portfolio-08-hero-02.jpg',
       '/images/portfolio/portfolio-08-hero-03.jpg',
     ],

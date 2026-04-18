@@ -18,7 +18,7 @@ export default function ContactSection({
 
       <h2 className="mb-4 text-4xl font-bold text-green-900">期待與您的聯繫</h2>
       <p className="mb-12 text-slate-500">
-        無論是大型開發案還是精緻私人場域，期待能加入貴公司，並與貴公司攜手創造改變環境的可能。
+        無論是大型開發案、都市更新計畫，或精緻私人場域，期待有機會與您交流，並共同探索更具環境價值的空間提案。
       </p>
 
       <div className="mb-12 grid gap-6 text-left md:grid-cols-2">

@@ -33,10 +33,6 @@ export default function AboutSection() {
             我深信景觀不是建築的附屬，而是城市呼吸的肺部、居民情感的寄託。每一個設計決策，都是為土地與人之間建立長遠對話的起點。
           </p>
 
-          <p className="mb-8 text-sm tracking-wide text-slate-400">
-            桌機可將滑鼠移到照片上；手機與平板可輕觸照片切換彩色顯示。
-          </p>
-
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-lg bg-green-50 p-4 transition-transform hover:-translate-y-1">
               <div className="text-2xl font-bold text-green-800">11+</div>

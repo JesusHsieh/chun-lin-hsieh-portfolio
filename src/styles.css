@@ -54,12 +54,8 @@ textarea {
   aspect-ratio: 21 / 9;
   overflow: hidden;
   border-radius: 1rem;
-  background:
-    radial-gradient(circle at top left, rgba(38, 87, 54, 0.38), transparent 30%),
-    linear-gradient(135deg, #0f172a 0%, #111827 42%, #1f2937 100%);
-  box-shadow:
-    0 30px 60px rgba(15, 23, 42, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: transparent;
+  box-shadow: none;
   transform-style: preserve-3d;
 }
 
@@ -73,8 +69,8 @@ textarea {
 
 .project-hero-3d__ambient {
   background:
-    radial-gradient(circle at 15% 18%, rgba(196, 247, 211, 0.2), transparent 24%),
-    radial-gradient(circle at 80% 70%, rgba(209, 250, 229, 0.14), transparent 22%);
+    radial-gradient(circle at 15% 18%, rgba(196, 247, 211, 0.08), transparent 24%),
+    radial-gradient(circle at 80% 70%, rgba(209, 250, 229, 0.06), transparent 22%);
   animation: ambientPulse 7s ease-in-out infinite alternate;
 }
 
@@ -85,7 +81,7 @@ textarea {
     linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: 0.26;
+  opacity: 0.08;
   transform: rotateX(78deg) translateZ(-100px);
   transform-origin: center top;
 }
@@ -94,9 +90,9 @@ textarea {
   inset: 14% auto auto 8%;
   width: 26%;
   aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 999px;
-  box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 0 18px rgba(15, 23, 42, 0.02);
   transform: translateZ(40px);
   animation: orbitSpin 16s linear infinite;
 }
@@ -112,10 +108,10 @@ textarea {
 
 .project-hero-3d__slider {
   position: absolute;
-  left: 14%;
-  top: 12%;
-  width: 56%;
-  height: 68%;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+  height: 96%;
   transform-style: preserve-3d;
 }
 
@@ -135,22 +131,22 @@ textarea {
 .project-hero-3d__panel--active {
   opacity: 1;
   filter: saturate(1);
-  transform: translate3d(0, 0, 90px) rotateY(-14deg) rotateX(6deg);
+  transform: translate3d(0, 0, 90px) rotateY(-6deg) rotateX(2deg);
   z-index: 3;
 }
 
 .project-hero-3d__panel--previous {
   opacity: 0;
   filter: blur(1px) saturate(0.82);
-  transform: translate3d(-14%, 0, 20px) rotateY(54deg) rotateX(6deg);
+  transform: translate3d(-8%, 0, 24px) rotateY(52deg) rotateX(3deg);
   transform-origin: left center;
   z-index: 2;
 }
 
 .project-hero-3d__panel--next {
-  opacity: 0.18;
+  opacity: 0.1;
   filter: saturate(0.7);
-  transform: translate3d(10%, 0, -70px) rotateY(-20deg) rotateX(8deg) scale(0.94);
+  transform: translate3d(5%, 0, -60px) rotateY(-12deg) rotateX(4deg) scale(0.97);
   z-index: 1;
 }
 
@@ -158,105 +154,31 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.68)),
-    linear-gradient(180deg, rgba(16, 24, 39, 0.1), rgba(16, 24, 39, 0.48));
-}
-
-.project-hero-3d__content {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 2rem;
-  color: #f8fafc;
-}
-
-.project-hero-3d__eyebrow {
-  margin: 0 0 0.75rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(220, 252, 231, 0.9);
-}
-
-.project-hero-3d__title {
-  margin: 0;
-  max-width: 26rem;
-  font-size: clamp(1.2rem, 2vw, 2rem);
-  line-height: 1.2;
-}
-
-.project-hero-3d__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1rem;
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(226, 232, 240, 0.84);
-}
-
-.project-hero-3d__panel--glass {
-  right: 9%;
-  top: 19%;
-  width: 25%;
-  min-width: 220px;
-  height: 52%;
-  padding: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
-  backdrop-filter: blur(18px);
-  transform: translate3d(0, 0, 110px) rotateY(16deg) rotateX(-5deg);
-  animation: glassFloat 7s ease-in-out infinite;
-}
-
-.project-hero-3d__glass-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: #bbf7d0;
-}
-
-.project-hero-3d__glass-copy {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: rgba(241, 245, 249, 0.92);
+    linear-gradient(135deg, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.08)),
+    linear-gradient(180deg, rgba(16, 24, 39, 0.02), rgba(16, 24, 39, 0.05));
 }
 
 .project-hero-3d__pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  z-index: 5;
   display: flex;
   gap: 0.5rem;
-  margin-top: 1.25rem;
+  transform: translateX(-50%);
 }
 
 .project-hero-3d__dot {
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(15, 23, 42, 0.2);
   transition: transform 240ms ease, background-color 240ms ease;
 }
 
 .project-hero-3d__dot--active {
-  background: #bbf7d0;
+  background: rgba(15, 23, 42, 0.72);
   transform: scale(1.4);
-}
-
-@keyframes glassFloat {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 110px) rotateY(16deg) rotateX(-5deg);
-  }
-
-  50% {
-    transform: translate3d(0, 12px, 120px) rotateY(12deg) rotateX(-8deg);
-  }
 }
 
 @keyframes orbitSpin {
@@ -287,19 +209,10 @@ textarea {
   }
 
   .project-hero-3d__slider {
-    left: 7%;
-    top: 9%;
-    width: 72%;
-    height: 72%;
-  }
-
-  .project-hero-3d__panel--glass {
-    right: 6%;
-    top: auto;
-    bottom: 8%;
-    width: 38%;
-    min-width: 0;
-    height: auto;
+    left: 2%;
+    top: 4%;
+    width: 96%;
+    height: 88%;
   }
 }
 
@@ -315,34 +228,16 @@ textarea {
   }
 
   .project-hero-3d__slider {
-    left: 9%;
-    top: 12%;
-    width: 82%;
-    height: 50%;
-  }
-
-  .project-hero-3d__content {
-    padding: 1.25rem;
-  }
-
-  .project-hero-3d__panel--glass {
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    width: auto;
-    transform: translate3d(0, 0, 90px);
-  }
-
-  .project-hero-3d__glass-copy {
-    font-size: 0.88rem;
-    line-height: 1.65;
+    left: 1%;
+    top: 8%;
+    width: 98%;
+    height: 74%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .project-hero-3d__ambient,
-  .project-hero-3d__ring,
-  .project-hero-3d__panel--glass {
+  .project-hero-3d__ring {
     animation: none;
   }
 

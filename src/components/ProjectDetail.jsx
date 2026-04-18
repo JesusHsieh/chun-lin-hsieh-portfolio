@@ -59,7 +59,7 @@ export default function ProjectDetail({
         </div>
       </div>
 
-      {variant === 'portfolio' ? (
+      {project.heroImages?.length ? (
         <ProjectHero3D project={project} />
       ) : (
         <div className="group relative mb-12 aspect-[16/9] overflow-hidden rounded-xl bg-slate-100 shadow-lg md:aspect-[21/9]">

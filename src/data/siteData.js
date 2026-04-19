@@ -83,9 +83,9 @@ export const PROJECTS = [
     title: '南港機廠社會住宅 | 循環經濟示範基地',
     category: '社會住宅 / 永續景觀',
     year: '2024',
-    coverImage: '/images/portfolio/portfolio-03-cover.jpg',
+    coverImage: '/images/portfolio/portfolio-03-cover.jpeg',
     heroImages: [
-      '/images/portfolio/portfolio-03-hero-01.jpg',
+      '/images/portfolio/portfolio-03-hero-01.jpeg',
       '/images/portfolio/portfolio-03-hero-02.jpg',
       '/images/portfolio/portfolio-03-hero-03.jpg',
     ],

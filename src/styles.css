@@ -38,11 +38,262 @@ textarea {
   font: inherit;
 }
 
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at top left, rgba(230, 237, 232, 0.58), transparent 24%),
+    linear-gradient(180deg, rgba(250, 252, 250, 0.98), rgba(243, 246, 242, 0.99));
+}
+
+.rain-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.rain-bg__wash,
+.rain-bg__ripples,
+.rain-bg__flora,
+.rain-bg__grain {
+  position: absolute;
+  inset: 0;
+}
+
+.rain-bg__wash--top {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(210, 223, 214, 0.62), transparent 28%),
+    radial-gradient(circle at 78% 18%, rgba(220, 230, 223, 0.52), transparent 24%);
+}
+
+.rain-bg__wash--bottom {
+  background:
+    radial-gradient(circle at 26% 78%, rgba(200, 215, 205, 0.5), transparent 24%),
+    radial-gradient(circle at 82% 70%, rgba(208, 221, 211, 0.44), transparent 28%);
+}
+
+.rain-bg__ripple {
+  position: absolute;
+  border: 2px solid rgba(96, 127, 111, 0.5);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 52%),
+    radial-gradient(circle, rgba(182, 206, 191, 0.14), transparent 72%);
+  box-shadow:
+    0 0 0 1px rgba(239, 245, 241, 0.46) inset,
+    0 0 34px rgba(193, 211, 200, 0.18);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  animation: rainRipple 5.8s ease-out infinite;
+}
+
+.rain-bg__ripple--one {
+  left: 18%;
+  top: 22%;
+  width: 10rem;
+  height: 10rem;
+  animation-delay: 0s;
+}
+
+.rain-bg__ripple--two {
+  left: 67%;
+  top: 24%;
+  width: 14rem;
+  height: 14rem;
+  animation-delay: 1.8s;
+}
+
+.rain-bg__ripple--three {
+  left: 34%;
+  top: 54%;
+  width: 12rem;
+  height: 12rem;
+  animation-delay: 3.5s;
+}
+
+.rain-bg__ripple--four {
+  left: 78%;
+  top: 62%;
+  width: 16rem;
+  height: 16rem;
+  animation-delay: 5.2s;
+}
+
+.rain-bg__ripple--five {
+  left: 22%;
+  top: 78%;
+  width: 11rem;
+  height: 11rem;
+  animation-delay: 6.7s;
+}
+
+.rain-bg__ripple--six {
+  left: 56%;
+  top: 82%;
+  width: 13rem;
+  height: 13rem;
+  animation-delay: 8.1s;
+}
+
+.rain-bg__ripple--seven {
+  left: 46%;
+  top: 18%;
+  width: 8.5rem;
+  height: 8.5rem;
+  animation-delay: 0.9s;
+}
+
+.rain-bg__ripple--eight {
+  left: 84%;
+  top: 38%;
+  width: 10rem;
+  height: 10rem;
+  animation-delay: 2.6s;
+}
+
+.rain-bg__ripple--nine {
+  left: 14%;
+  top: 48%;
+  width: 9rem;
+  height: 9rem;
+  animation-delay: 4.4s;
+}
+
+.rain-bg__ripple--ten {
+  left: 72%;
+  top: 86%;
+  width: 11rem;
+  height: 11rem;
+  animation-delay: 1.7s;
+}
+
+.rain-bg__leaf,
+.rain-bg__petal {
+  position: absolute;
+  display: block;
+  opacity: 0.68;
+  filter: blur(0.2px);
+}
+
+.rain-bg__leaf {
+  width: 3.8rem;
+  height: 3.8rem;
+  background: linear-gradient(145deg, rgba(122, 148, 110, 0.62), rgba(173, 149, 96, 0.44));
+  box-shadow: 0 8px 20px rgba(122, 140, 111, 0.12);
+}
+
+.rain-bg__leaf--maple-one {
+  left: 14%;
+  top: 30%;
+  clip-path: polygon(50% 0%, 61% 16%, 78% 9%, 72% 28%, 92% 34%, 74% 46%, 82% 66%, 61% 61%, 53% 100%, 45% 61%, 24% 67%, 31% 47%, 10% 34%, 29% 28%, 22% 9%, 39% 16%);
+  animation: driftLeafOne 14s ease-in-out infinite alternate;
+}
+
+.rain-bg__leaf--maple-two {
+  right: 18%;
+  top: 58%;
+  width: 3.2rem;
+  height: 3.2rem;
+  clip-path: polygon(50% 0%, 61% 16%, 78% 9%, 72% 28%, 92% 34%, 74% 46%, 82% 66%, 61% 61%, 53% 100%, 45% 61%, 24% 67%, 31% 47%, 10% 34%, 29% 28%, 22% 9%, 39% 16%);
+  animation: driftLeafTwo 16s ease-in-out infinite alternate;
+}
+
+.rain-bg__leaf--maple-three {
+  left: 58%;
+  top: 42%;
+  width: 3.4rem;
+  height: 3.4rem;
+  clip-path: polygon(50% 0%, 61% 16%, 78% 9%, 72% 28%, 92% 34%, 74% 46%, 82% 66%, 61% 61%, 53% 100%, 45% 61%, 24% 67%, 31% 47%, 10% 34%, 29% 28%, 22% 9%, 39% 16%);
+  animation: driftLeafThreeAlt 17s ease-in-out infinite alternate;
+}
+
+.rain-bg__leaf--ginkgo-one {
+  left: 72%;
+  top: 16%;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: linear-gradient(145deg, rgba(193, 177, 111, 0.58), rgba(164, 177, 115, 0.34));
+  clip-path: polygon(50% 8%, 70% 14%, 84% 28%, 88% 50%, 80% 67%, 67% 79%, 50% 86%, 33% 79%, 20% 67%, 12% 50%, 16% 28%, 30% 14%);
+  animation: driftLeafThree 15s ease-in-out infinite alternate;
+}
+
+.rain-bg__leaf--ginkgo-two {
+  left: 42%;
+  top: 74%;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(145deg, rgba(188, 174, 112, 0.46), rgba(154, 170, 118, 0.28));
+  clip-path: polygon(50% 8%, 70% 14%, 84% 28%, 88% 50%, 80% 67%, 67% 79%, 50% 86%, 33% 79%, 20% 67%, 12% 50%, 16% 28%, 30% 14%);
+  animation: driftLeafFour 13s ease-in-out infinite alternate;
+}
+
+.rain-bg__leaf--ginkgo-three {
+  right: 10%;
+  top: 30%;
+  width: 3.3rem;
+  height: 3.3rem;
+  background: linear-gradient(145deg, rgba(194, 180, 114, 0.52), rgba(157, 173, 120, 0.32));
+  clip-path: polygon(50% 8%, 70% 14%, 84% 28%, 88% 50%, 80% 67%, 67% 79%, 50% 86%, 33% 79%, 20% 67%, 12% 50%, 16% 28%, 30% 14%);
+  animation: driftLeafFourAlt 16s ease-in-out infinite alternate;
+}
+
+.rain-bg__petal {
+  width: 2.1rem;
+  height: 1.35rem;
+  background: linear-gradient(135deg, rgba(221, 199, 187, 0.52), rgba(195, 176, 166, 0.3));
+  border-radius: 80% 20% 70% 30%;
+  box-shadow: 0 6px 18px rgba(198, 184, 175, 0.12);
+}
+
+.rain-bg__petal--one {
+  left: 30%;
+  top: 16%;
+  animation: driftPetalOne 12s ease-in-out infinite alternate;
+}
+
+.rain-bg__petal--two {
+  right: 24%;
+  bottom: 18%;
+  animation: driftPetalTwo 15s ease-in-out infinite alternate;
+}
+
+.rain-bg__petal--three {
+  left: 64%;
+  top: 66%;
+  animation: driftPetalThree 13s ease-in-out infinite alternate;
+}
+
+.rain-bg__grain {
+  opacity: 0.075;
+  background-image:
+    radial-gradient(rgba(15, 23, 42, 0.03) 0.7px, transparent 0.7px),
+    radial-gradient(rgba(95, 117, 103, 0.03) 0.7px, transparent 0.7px);
+  background-position: 0 0, 18px 18px;
+  background-size: 28px 28px;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.nav-hero-title {
+  display: inline-flex;
+  min-height: 1.25rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-hero-title__char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.35rem);
+  animation: navTitleReveal 520ms ease forwards;
 }
 
 .project-hero-3d {
@@ -203,6 +454,130 @@ textarea {
   }
 }
 
+@keyframes navTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes rainRipple {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+
+  14% {
+    opacity: 0.82;
+  }
+
+  58% {
+    opacity: 0.34;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.35);
+  }
+}
+
+@keyframes driftLeafOne {
+  from {
+    transform: translate3d(0, 0, 0) rotate(12deg);
+  }
+
+  to {
+    transform: translate3d(3vw, 4vh, 0) rotate(84deg);
+  }
+}
+
+@keyframes driftLeafTwo {
+  from {
+    transform: translate3d(0, 0, 0) rotate(-8deg);
+  }
+
+  to {
+    transform: translate3d(-4vw, 5vh, 0) rotate(-64deg);
+  }
+}
+
+@keyframes driftLeafThree {
+  from {
+    transform: translate3d(0, 0, 0) rotate(6deg);
+  }
+
+  to {
+    transform: translate3d(-3vw, 4vh, 0) rotate(42deg);
+  }
+}
+
+@keyframes driftLeafThreeAlt {
+  from {
+    transform: translate3d(0, 0, 0) rotate(-10deg);
+  }
+
+  to {
+    transform: translate3d(3vw, -3vh, 0) rotate(48deg);
+  }
+}
+
+@keyframes driftLeafFour {
+  from {
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  to {
+    transform: translate3d(2vw, 3vh, 0) rotate(58deg);
+  }
+}
+
+@keyframes driftLeafFourAlt {
+  from {
+    transform: translate3d(0, 0, 0) rotate(14deg);
+  }
+
+  to {
+    transform: translate3d(-2.5vw, 4vh, 0) rotate(74deg);
+  }
+}
+
+@keyframes driftPetalOne {
+  from {
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  to {
+    transform: translate3d(4vw, 5vh, 0) rotate(90deg);
+  }
+}
+
+@keyframes driftPetalTwo {
+  from {
+    transform: translate3d(0, 0, 0) rotate(-12deg);
+  }
+
+  to {
+    transform: translate3d(-3vw, -4vh, 0) rotate(62deg);
+  }
+}
+
+@keyframes driftPetalThree {
+  from {
+    transform: translate3d(0, 0, 0) rotate(8deg);
+  }
+
+  to {
+    transform: translate3d(2.5vw, 3vh, 0) rotate(78deg);
+  }
+}
+
 @media (max-width: 900px) {
   .project-hero-3d__stage {
     aspect-ratio: 16 / 10;
@@ -217,6 +592,26 @@ textarea {
 }
 
 @media (max-width: 640px) {
+  .rain-bg__ripple--one,
+  .rain-bg__ripple--three,
+  .rain-bg__ripple--five {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .rain-bg__ripple--two,
+  .rain-bg__ripple--four,
+  .rain-bg__ripple--six,
+  .rain-bg__ripple--eight,
+  .rain-bg__ripple--ten {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .rain-bg__grain {
+    opacity: 0.04;
+  }
+
   .project-hero-3d__stage {
     aspect-ratio: 5 / 6;
   }
@@ -236,6 +631,9 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .rain-bg__ripple,
+  .rain-bg__leaf,
+  .rain-bg__petal,
   .project-hero-3d__ambient,
   .project-hero-3d__ring {
     animation: none;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import AboutSection from './components/AboutSection.jsx';
+import CityEvolutionBackground from './components/CityEvolutionBackground.jsx';
 import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
@@ -70,7 +71,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc] font-sans text-slate-800">
+    <div className="site-shell min-h-screen font-sans text-slate-800">
+      <CityEvolutionBackground />
+
       <Navigation
         activeTab={activeTab}
         isMenuOpen={isMenuOpen}
@@ -80,7 +83,7 @@ export default function App() {
         onCloseMenu={() => setIsMenuOpen(false)}
       />
 
-      <main className="px-6 pb-20 pt-24">
+      <main className="relative z-10 px-6 pb-20 pt-24">
         {activeTab === 'portfolio' && !selectedProject ? (
           <div className="mx-auto max-w-7xl">
             <SectionHeader
@@ -140,7 +143,9 @@ export default function App() {
         ) : null}
       </main>
 
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 }

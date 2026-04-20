@@ -1,5 +1,13 @@
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../data/siteData.js';
+
+const HERO_TITLES = [
+  'URBAN DESIGNER',
+  'LANDSCAPE ARCHITECT',
+  'PROJECT MANAGER',
+  'SPACE MAKER',
+];
 
 export default function Navigation({
   activeTab,
@@ -9,6 +17,18 @@ export default function Navigation({
   onToggleMenu,
   onCloseMenu,
 }) {
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setTitleIndex((current) => (current + 1) % HERO_TITLES.length);
+    }, 3400);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  const animatedTitle = HERO_TITLES[titleIndex];
+
   return (
     <>
       <nav
@@ -18,11 +38,22 @@ export default function Navigation({
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <div className="flex flex-col">
-            <h1 className="text-xl font-bold tracking-tighter text-slate-900 uppercase">
+            <h1 className="text-2xl font-bold tracking-[-0.06em] text-slate-900 uppercase md:text-[1.65rem]">
               CHUN-LIN HSIEH
             </h1>
-            <span className="text-[10px] font-medium tracking-[0.2em] text-slate-500">
-              LANDSCAPE ARCHITECT & MANAGER
+            <span
+              className="nav-hero-title mt-1 text-[12px] font-medium tracking-[0.18em] text-slate-500 md:text-[13px]"
+              aria-label={animatedTitle}
+            >
+              {animatedTitle.split('').map((character, index) => (
+                <span
+                  key={`${animatedTitle}-${index}`}
+                  className="nav-hero-title__char"
+                  style={{ animationDelay: `${index * 42}ms` }}
+                >
+                  {character === ' ' ? '\u00A0' : character}
+                </span>
+              ))}
             </span>
           </div>
 

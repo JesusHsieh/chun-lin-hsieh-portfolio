@@ -15,7 +15,6 @@ export default function Navigation({
   scrolled,
   onSelectTab,
   onToggleMenu,
-  onCloseMenu,
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
 
@@ -74,7 +73,12 @@ export default function Navigation({
             ))}
           </div>
 
-          <button type="button" className="p-2 md:hidden" onClick={onToggleMenu} aria-label="切換選單">
+          <button
+            type="button"
+            className="p-2 md:hidden"
+            onClick={onToggleMenu}
+            aria-label={isMenuOpen ? '關閉選單' : '開啟選單'}
+          >
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -82,15 +86,6 @@ export default function Navigation({
 
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 bg-white">
-          <button
-            type="button"
-            className="absolute right-6 top-6 p-2 text-slate-500 transition-colors hover:text-slate-900"
-            onClick={onCloseMenu}
-            aria-label="關閉選單"
-          >
-            <X size={32} />
-          </button>
-
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}

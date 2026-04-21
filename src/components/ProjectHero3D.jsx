@@ -2,12 +2,13 @@ import { useEffect, useMemo, useState } from 'react';
 
 function buildSlides(project) {
   const customSlides = project.heroImages?.filter(Boolean).slice(0, 3);
+  const defaultHeroPosition = project.heroImagePosition ?? 'center center';
 
   if (customSlides?.length) {
     return customSlides.map((src, index) => ({
       src,
       label: `Scene ${String(index + 1).padStart(2, '0')}`,
-      backgroundPosition: 'center center',
+      backgroundPosition: project.heroImagePositions?.[index] ?? defaultHeroPosition,
     }));
   }
 

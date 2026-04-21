@@ -89,6 +89,7 @@ export const PROJECTS = [
       '/images/portfolio/portfolio-03-hero-02.jpg',
       '/images/portfolio/portfolio-03-hero-03.jpg',
     ],
+    heroImagePositions: ['center center', 'center 100%', 'center center'],
     description: '全台首座結合循環經濟與立體綠化的大型社會住宅景觀設計。',
     client: '台北市政府都市發展局',
     area: '約 7.8 公頃',
@@ -130,6 +131,11 @@ export const PROJECTS = [
       '/images/portfolio/portfolio-05-hero-02.jpg',
       '/images/portfolio/portfolio-05-hero-03.webp',
     ],
+    heroImagePositions: [
+      'center 100%',
+      'center calc(100% + 100px)',
+      'center calc(100% + 100px)',
+    ],
     description:
       '攜手 Karl Lagerfeld 團隊，將巴黎高級訂製服美學轉譯為景觀語彙的頂尖豪宅大作。',
     client: '忠泰建設',
@@ -151,6 +157,7 @@ export const PROJECTS = [
       '/images/portfolio/portfolio-06-hero-02.JPG',
       '/images/portfolio/portfolio-06-hero-03.JPG',
     ],
+    heroImagePositions: ['center 100%', 'center 100%', 'center 100%'],
     description:
       '於高密度都會區中重塑大型全齡化社區，兼顧防災滯洪與鄰里友善的開放綠地空間。',
     client: '勝治機構 / 大陸建設',

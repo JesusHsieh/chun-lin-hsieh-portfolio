@@ -18,7 +18,7 @@ export default function AboutSection() {
           aria-pressed={isPhotoActive}
         >
           <img
-            src="/images/profile/profile-about.png"
+            src="/images/profile/my.png"
             alt="謝君臨個人照片"
             className="h-full w-full object-cover"
           />

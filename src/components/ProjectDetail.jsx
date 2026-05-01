@@ -87,7 +87,7 @@ export default function ProjectDetail({
               rel="noreferrer"
               className="inline-flex rounded-lg bg-green-900 px-5 py-3 text-sm font-bold tracking-widest text-white uppercase transition-colors hover:bg-green-800"
             >
-              查看線上專案
+              {project.projectLinkLabel ?? '查看線上專案'}
             </a>
           ) : null}
         </div>

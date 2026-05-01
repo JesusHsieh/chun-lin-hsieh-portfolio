@@ -108,7 +108,10 @@ export default function App() {
 
         {activeTab === 'personal' && !selectedPersonalProject ? (
           <div className="mx-auto max-w-7xl">
-            <SectionHeader title="數位轉型與技術整合" subtitle="前瞻性的景觀工程工具。" />
+            <SectionHeader
+              title="LANDWEAVER AI 工具平台"
+              subtitle="整合景觀分析、法規檢討與 AI 輔助設計的實作平台。"
+            />
             <ProjectGrid
               items={PERSONAL_PROJECTS}
               onSelect={setSelectedPersonalProject}

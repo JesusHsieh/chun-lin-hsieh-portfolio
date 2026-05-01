@@ -235,50 +235,9 @@ export const PROJECTS = [
 
 export const PERSONAL_PROJECTS = [
   {
-    id: 1,
-    title: '雙北綠化法規整合計算機',
-    category: '開發工具 / 自動化',
-    year: '2024',
-    coverImage: '/images/personal/personal-01-cover.jpg',
-    heroImages: [
-      '/images/personal/personal-01-hero-01.jpg',
-      '/images/personal/personal-01-hero-02.jpg',
-    ],
-    projectUrl: 'https://jesushsieh.github.io/taipei-greenery-calc/',
-    description:
-      '整合台北市與新北市現行法規的網頁端綠化計算工具，具備跨縣市參數切換功能，自動精準試算綠覆率與相關指標的個人專案。',
-    area: '網頁前端程式（React / JS）',
-    icon: 'calculator',
-    details: [
-      '這是我在進修期間自主開發的個人專案作業，主要針對台北市與新北市兩地現行且時常更新的景觀綠化相關法規，進行數位化與跨縣市的程式邏輯整合。',
-      '由於雙北在法定空地綠化、保水指標與喬灌木計分標準上存在顯著差異，本系統透過直覺的參數化介面，讓設計師只需一鍵切換基地所在行政區，系統底層即會自動對接對應的法規演算法，即時換算出符合當地規範的檢討報表。',
-      '此專案不僅大幅解決了景觀從業人員在處理跨縣市案件時，因法規制度不同而導致的繁瑣人工試算與除錯成本，也展現了我將複雜景觀法規轉化為現代化數位自動化工具的跨領域實踐成果。',
-    ],
-  },
-  {
-    id: 2,
-    title: '台灣原生植栽資料庫 API',
-    category: '數據平台 / 生態復育',
-    year: '2024',
-    coverImage: '/images/personal/personal-02-cover.jpg',
-    heroImages: [
-      '/images/personal/personal-02-hero-01.jpg',
-      '/images/personal/personal-02-hero-02.jpg',
-    ],
-    description: '建立高互動性的植栽檢索系統，提供設計師依據微氣候條件精準選種。',
-    client: '開源專案',
-    area: '雲端資料庫',
-    icon: 'database',
-    details: [
-      '這是一個專為台灣景觀從業人員打造的開源植栽資料庫，收錄超過 1,000 種本土原生與常見景觀植物的詳細生長特性、日照需求、抗風耐鹽等數據。',
-      '系統具備智慧篩選功能，設計師可輸入基地的環境參數，例如土壤酸鹼值、年降雨量與季風風向，系統將自動推薦最適合的植栽配置清單。',
-      '本資料庫持續以社群共創的方式擴充，期望能成為推動台灣城鄉生態多樣性的重要數位基礎設施。',
-    ],
-  },
-  {
     id: 3,
     title: 'LANDWEAVER AI 景觀設計工具平台',
-    category: 'AI 工具平台 / 景觀分析',
+    category: '正式上線平台 / AI 景觀工作流',
     year: '2026',
     coverImage: '/images/personal/personal-03-cover.jpg',
     heroImages: [
@@ -286,15 +245,17 @@ export const PERSONAL_PROJECTS = [
       '/images/personal/personal-03-hero-02.jpg',
       '/images/personal/personal-03-hero-03.jpg',
     ],
+    projectUrl: 'https://land-weaver-ai.vercel.app',
+    projectLinkLabel: '前往正式網站',
     description:
-      '整合基地分析、景觀概念發想與 AI 圖像生成流程的網頁平台，目標是把前期設計決策集中在同一套工作介面中完成。',
-    client: '自研平台原型',
-    area: 'Web 應用程式 / AI 工作流',
+      '已正式上線的景觀設計工具平台，整合基地分析、法規檢討、植栽資料與 AI 輔助設計流程，將前期設計決策集中於同一套工作介面。',
+    client: '正式上線平台',
+    area: 'Web 應用程式 / AI 景觀工作流',
     icon: 'code',
     details: [
-      'LANDWEAVER AI 是一套以景觀設計前期流程為核心的整合型平台構想。首頁架構把工作內容拆成基地分析、概念發展、空間視覺生成與平面配置等模組，讓設計師可以依序推進，不必在多個工具之間來回切換。',
-      '從介面畫面可以看出，系統不只處理靜態圖像，而是嘗試把 3D 地形、衛星底圖、日照與微氣候分析，以及輸出報告整合在同一個工作流中。這樣的設計更貼近景觀專案從基地判讀到方案發展的真實需求。',
-      '專案的核心價值不只是生成結果，而是建立一套適合景觀設計師使用的 AI 工作介面。未來若持續發展，可延伸為基地資料整合、概念提案輔助與初步視覺溝通的數位平台。',
+      'LANDWEAVER AI 以景觀設計前期流程為核心，將基地分析、法規檢討、植栽資料、概念發展與 AI 視覺生成整合在同一個平台中，讓設計師能以更連續的方式推進方案判斷。',
+      '平台不是單純的圖像生成展示，而是嘗試把設計決策中的資料輸入、環境條件判讀、工具模組與輸出溝通串成完整工作流，貼近景觀專案從基地理解到提案發展的真實需求。',
+      '作為個人技術整合成果，LANDWEAVER AI 展示了我將景觀專業、法規邏輯、資料結構與前端產品思維結合的能力，也可作為應徵數位轉型、設計管理或景觀科技相關職務時的重點案例。',
     ],
   },
 ];
